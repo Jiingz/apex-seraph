@@ -1,0 +1,1 @@
+D:\dev\apex-seraph\sources\kernelmode_server\build\output\kernel_socket_server.sys
