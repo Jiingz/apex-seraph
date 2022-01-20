@@ -33,7 +33,7 @@ namespace offsets
 		constexpr auto m_bones = 0xF38; // m_bConstrainBetweenEndpoints || m_nForceBone + 0x48
 		constexpr auto m_bZooming = 0x1c31; //bool
 		constexpr auto m_localAngles = 0x490; //Vector3
-		constexpr auto camer_origin = 0x014C; //Vector3
+		constexpr auto camer_origin = 0x014C; //Vector3 // m_vecAbsOrigin
 		constexpr auto camera_angles = 0x1f20; //Vector3 CPlayer!camera_origin
 		constexpr auto m_view_angles = 0x257c - 0x14; //m_ammoPoolCapacity - 0x14
 		constexpr auto m_breath_angles = m_view_angles - 0x10; //Vector3

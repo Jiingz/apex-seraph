@@ -29,12 +29,12 @@ void features::Glow::GlowOnFrame()
 			if (game::Entity::IsVisible(entity, i))
 				Glow::GlowPlayer(entity,
 					game::structs::GlowContext::Outline,
-					game::structs::Color{ 0.f,15.f,0.f });
+					game::structs::Color{ 0.f,200.f,0.f });
 			else
 				Glow::GlowPlayer(
 					entity,
 					game::structs::GlowContext::Outline,
-					game::structs::Color{ 15.f,0.f,0.f });
+					game::structs::Color{ 200.f,0.f,0.f });
 		}
 	}
 }

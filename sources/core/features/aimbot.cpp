@@ -120,5 +120,5 @@ void Aimbot::Execute()
 	if (!core::ServiceLocator::GetWorld()->WorldToScreen(target_head, aim_pos))
 		return;
 
-	core::ServiceLocator::GetSerialController()->SendAimCommand(aim_pos.X, aim_pos.Y, 3.f);
+	core::ServiceLocator::GetSerialController()->SendAimCommand(aim_pos.X, aim_pos.Y, 1.8f);
 }
