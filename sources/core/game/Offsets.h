@@ -28,18 +28,18 @@ namespace offsets
 		constexpr auto m_iName = 0x589;
 		constexpr auto m_iSignifierName = 0x0580;
 		constexpr auto m_customScriptInt = 0x1698;
-		constexpr auto m_visible_time = 0x16e0; //float
+		constexpr auto m_visible_time = 0x1af4; //float
 		constexpr auto m_latestPrimaryWeapons = 0x1a8c;
 		constexpr auto m_bones = 0xF38; // m_bConstrainBetweenEndpoints || m_nForceBone + 0x48
 		constexpr auto m_bZooming = 0x1c31; //bool
-		constexpr auto camer_origin = 0x014C; //Vector3
 		constexpr auto m_localAngles = 0x490; //Vector3
+		constexpr auto camer_origin = 0x014C; //Vector3
 		constexpr auto camera_angles = 0x1f20; //Vector3 CPlayer!camera_origin
 		constexpr auto m_view_angles = 0x257c - 0x14; //m_ammoPoolCapacity - 0x14
 		constexpr auto m_breath_angles = m_view_angles - 0x10; //Vector3
 		constexpr auto m_iObserverMode = 0x33dc;
 		constexpr auto m_hObserverTarget = 0x33e8;
-		constexpr auto m_vecPunchWeapon_Angle = 0x2480; //Vector3
+		constexpr auto m_vecPunchWeapon_Angle = 0x2480; //Vector3 // m_currentFrameLocalPlayer.m_vecPunchWeapon_Angle
 		constexpr auto m_vecAbsVelocity = 0x0140;
 	}
 

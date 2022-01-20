@@ -3,7 +3,6 @@
 
 void features::Glow::GlowPlayer(uintptr_t entity, game::structs::GlowContext glow_context, game::structs::Color color)
 {
-	int _one = 1;
 	driver::Write<int>(entity + offsets::engine::glow_context, glow_context);
 	driver::Write<int>(entity + offsets::engine::glow_through_walls, 2); //through walls //2 = enabled, 5 = disabled
 	//driver::Write<game::structs::GlowMode>(entity + offsets::engine::m_highlightFunctionBits, glow_mode);
@@ -32,7 +31,9 @@ void features::Glow::GlowOnFrame()
 					game::structs::GlowContext::Outline,
 					game::structs::Color{ 0.f,15.f,0.f });
 			else
-				Glow::GlowPlayer(entity, game::structs::GlowContext::Outline,
+				Glow::GlowPlayer(
+					entity,
+					game::structs::GlowContext::Outline,
 					game::structs::Color{ 15.f,0.f,0.f });
 		}
 	}
