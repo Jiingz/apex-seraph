@@ -1,4 +1,4 @@
-
+#include <core/core.h>
 #include <core/hardware/serial.h>
 #include <core/service_locator.h>
 #include <core/features/aimbot.h>
@@ -6,6 +6,9 @@
 
 #include <iostream>
 #include <string>
+#include <thread>
+
+std::shared_ptr<Config> config_;
 
 void FunctionExecution()
 {
@@ -18,14 +21,27 @@ void FunctionExecution()
 
 }
 
+void RunCore()
+{
+	FunctionExecution();
+}
 
-int main()
+Config* GetConfig()
+{
+	if (!config_)
+	{
+		config_ = std::make_shared<Config>();
+	}
+	return config_.get();
+}
+
+void InitializeCore()
 {
 	driver::Initialize();
 	hardware::SerialProvider::Setup();
+}
 
-	while (true)
-		FunctionExecution();
-
+int main()
+{
 	return 0;
 }

@@ -12,7 +12,7 @@ namespace features
 		static void GlowOnFrame();
 
 	private:
-		static void GlowPlayer(uintptr_t entity, game::structs::GlowContext glow_context, game::structs::Color color);
+		static void GlowPlayer(uintptr_t entity,bool visible);
 		static void GlowItem(uintptr_t entity);
 	};
 }

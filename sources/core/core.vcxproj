@@ -46,7 +46,7 @@
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
@@ -163,6 +163,7 @@
     <ClCompile Include="utils.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="core.h" />
     <ClInclude Include="driver\driver.h" />
     <ClInclude Include="driver\server_shared.h" />
     <ClInclude Include="features\aimbot.h" />
@@ -178,6 +179,7 @@
     <ClInclude Include="libs\LibWinRegUtil.h" />
     <ClInclude Include="libs\vector.h" />
     <ClInclude Include="libs\xor.h" />
+    <ClInclude Include="config.h" />
     <ClInclude Include="service_locator.h" />
     <ClInclude Include="utils.h" />
   </ItemGroup>

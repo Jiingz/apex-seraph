@@ -104,8 +104,8 @@ SOCKET driver::CreateSocketConnection()
 	if (connect(connection, (SOCKADDR*)&address, sizeof(address)) == SOCKET_ERROR)
 	{
 		closesocket(connection);
-		system(xor("color c"));
-		std::printf(xor("Connection failed. %o"), SOCKET_ERROR);
+		system(xor ("color c"));
+		std::printf(xor ("Connection failed. %o"), SOCKET_ERROR);
 		Sleep(5000);
 		return INVALID_SOCKET;
 	}

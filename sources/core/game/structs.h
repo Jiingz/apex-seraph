@@ -38,8 +38,8 @@ namespace game
 
 		struct visibleTime
 		{
-			float lastTime[100]; // last visible time in float
-			bool lastState[100]; // last visibility state
+			float last_vis_time[100]; // last visible time in float
+			bool last_state[100]; // last visibility state
 			uintptr_t lastCheck[100]; // last visibility check time
 		}static lastVis;
 

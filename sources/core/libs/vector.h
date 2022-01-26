@@ -577,9 +577,9 @@ struct Vector3
 
 	float DistanceTo(const Vector3& A, bool squared = true) const
 	{
-		const float dist = powf(A.X - X, 2) + powf(A.Y - Y, 2) + powf(A.Z - Z, 2);
-		//	const float out = sqrtf(powf(A.X - X, 2) + powf(A.Y - Y, 2) + powf(A.Z - Z, 2));
-		return squared ? sqrtf(dist) : dist;
+		return (*this - A).Length() * 0.01905f;
+		/*const float dist = powf(A.X - X, 2) + powf(A.Y - Y, 2) + powf(A.Z - Z, 2);
+		return squared ? sqrtf(dist) : dist;*/
 	}
 
 	operator std::string() const

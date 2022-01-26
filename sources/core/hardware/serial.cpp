@@ -15,8 +15,6 @@ void SerialProvider::Setup()
 	std::cout << xor ("[+] Connecting to device...") << std::endl;
 
 	while (!Serial5);
-
-	Sleep(3000);
 	system(xor ("cls")); 
 
 	while (Serial5.available())

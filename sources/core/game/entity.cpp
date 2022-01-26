@@ -46,14 +46,14 @@ bool game::Entity::IsAlive(uintptr_t player)
 
 bool game::Entity::IsVisible(uintptr_t player, int index)
 {
-	if (core::Utils::GetMs() >= (game::structs::lastVis.lastCheck[index] + 10)) // only check every 10ms else its gonna flicker
-	{
-		float visTime = driver::Read<float>(player + offsets::cai_base_npc::m_visible_time);
-		game::structs::lastVis.lastState[index] = visTime > game::structs::lastVis.lastTime[index] || visTime < 0.f && game::structs::lastVis.lastTime[index] > 0.f;
-		game::structs::lastVis.lastTime[index] = visTime;
-		game::structs::lastVis.lastCheck[index] = core::Utils::GetMs();
-	}
-	return game::structs::lastVis.lastState[index];
+	//if (GetTickCount64() >= (game::structs::lastVis.lastCheck[index] + 6)) // only check every 10ms else its gonna flicker
+	//{
+		float vis_time = driver::Read<float>(player + offsets::cai_base_npc::m_visible_time);
+		game::structs::lastVis.last_state[index] = vis_time > 0.f && vis_time > game::structs::lastVis.last_vis_time[index];
+		game::structs::lastVis.last_vis_time[index] = vis_time;
+		//game::structs::lastVis.lastCheck[index] = GetTickCount64();
+	//}
+	return game::structs::lastVis.last_state[index];
 }
 
 bool Entity::IsSprinting(uintptr_t player)
