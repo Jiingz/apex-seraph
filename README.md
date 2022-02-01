@@ -28,6 +28,10 @@ Since Easy Anti-Cheat detects IOCTL communication to drivers which are manually 
 
 Although it is generally considered slower than IOCTL, the performance was great.
 
+**IMPORTANT** 
+In order to use the Driver, you need to load it somehow (WINDOWS TEST MODE DOES NOT WORK WITH EAC!).
+I would advice to map it cleanly, since that's the way I did. There are still no bans so far for about a half year now.
+
 # [The Loader](https://github.com/Jiingz/apex-seraph/tree/main/sources/loader) #
 Including a Login System (You need to implement it your own, I've used Cryptolens) and settings for every Feature.
 
