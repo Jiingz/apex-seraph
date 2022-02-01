@@ -40,6 +40,13 @@ I did not investigate if EAC flags for doing so, but they definetly don't, and p
 
 ## How does it work? ##
 
+![Diagram](https://user-images.githubusercontent.com/49228523/151992550-3724f8ca-5023-449d-9ca2-131f5451fd81.png)
+
+The Usermode Application sends a [PacketCopyMemory](https://github.com/Jiingz/apex-seraph/blob/main/sources/core/driver/server_shared.h#L15) structure as packet to pass info to the Kernel Driver.
+
+Once received, the kernel driver reads the information in the game process and returns that info to the usermode application, which executes the logic
+and communicates with the Teensy (as described below) for aiming.
+
 The Teensy receives a array of size which holds the X and Y coordinates where the aimbot should aim at. [Communication Function](https://github.com/Jiingz/apex-seraph/blob/main/sources/core/hardware/serial_controller.cpp#L9)
 The serial port sends the data sequential, so we can handle the values [sequential](https://github.com/Jiingz/apex-seraph/blob/main/sources/Hardware/serial_connection/serial_connection.ino#L17) aswell, since we never receive an array, instead we receive the values in a sequential order.
 
