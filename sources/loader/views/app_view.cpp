@@ -10,7 +10,6 @@
 #include <filesystem>
 #include <iostream>
 #include "../app/application.h"
-#include "D:\dev\cryptolens-cpp-1.2.0\examples\VisualStudio\Example_Activate\license_check.h"
 #include <core/core.h>
 
 namespace ImGui {
@@ -171,9 +170,11 @@ void AppView::Render()
 	GetConfig()->color[4] = 1.f;
 
 }
-char buffer[256];
+
+
+//Removed.
 void loader::AppView::RenderLogin()
-{
+{/*
 	if (license_valid_)
 		return;
 
@@ -190,10 +191,10 @@ void loader::AppView::RenderLogin()
 	if (ImGui::Button("Login", { 64.f,19.f }))
 	{
 		Product apex;
-		apex.module_base = "sLHxRffwJGQBreHuM/BOw5eQQvr9P+xQ9NL+5mHmV7p0ZEn4kr6nl/ChoT5nldxg/XzyA2z81mW77qdFsraZ0aO/5K+bMRDAVgnLdNO/BD7ltdq/byTHWwy3xyUE9EF8q8SMNqRFunr5LP0CX+cL/DzQ8HKABK6xxL6+GAWWjqjhtibSaGelV3r++Izzr4mhwFQCh530ERjm3Cx5nOOQmejzr/SSprouNbDxUdTwY8ThRngZYj0chzgJ9repiYN+X/DX+uzhWRMatDQFVL2XhztK/TqgF6viorbMueNoEgGqOWZqFXu0WVqmyl5WV1Bugs6Yze32ENgNJBKei4fxPQ==";
-		apex.product_id = 13790;
-		apex.access_token = "WyIxMTE2NjQ3NSIsIm1aeFNEOFNnTzhXOFVJQnM2S2ZSRzVLTytPMFhQUzhISUF4eGt0QkciXQ==";
-		apex.exponent_base = "AQAB";
+		apex.module_base = "123";
+		apex.product_id = 123;
+		apex.access_token = "123";
+		apex.exponent_base = "123";
 
 		if (CheckLicense(apex, buffer))
 		{
@@ -205,5 +206,6 @@ void loader::AppView::RenderLogin()
 			memset(&buffer, 0, sizeof(buffer));
 
 	}
+	*/
 }
 
