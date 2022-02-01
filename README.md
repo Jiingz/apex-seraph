@@ -24,7 +24,7 @@ It also communicates with the Teensy through serial-port-communication.
 
 # [Kernel Driver](https://github.com/Jiingz/apex-seraph/tree/main/sources/kernelmode_server)
 
-The kernelmode driver uses MmCopyVirtualMemory which gets a pointer to the Windows-Internal [EPROCESS](https://www.nirsoft.net/kernel_struct/vista/EPROCESS.html) structure through [PsLookupProcessByProcessId}(https://docs.microsoft.com/en-us/windows-hardware/drivers/ddi/ntifs/nf-ntifs-pslookupprocessbyprocessid)
+The kernelmode driver uses MmCopyVirtualMemory which gets a pointer to the Windows-Internal [EPROCESS](https://www.nirsoft.net/kernel_struct/vista/EPROCESS.html) structure through [PsLookupProcessByProcessId](https://docs.microsoft.com/en-us/windows-hardware/drivers/ddi/ntifs/nf-ntifs-pslookupprocessbyprocessid)
 
 Since Easy Anti-Cheat detects IOCTL communication to drivers which are manually mapped (pointing to invalid driver device in memory) , socket communication was used.
 
