@@ -17,7 +17,7 @@ Seraph requires you to have the latest Windows10 Version
 
 In order to compile the Projects.
 
-It consists of 4 components:
+# It consists of 4 components: #
 
 # [Usermode Application](https://github.com/Jiingz/apex-seraph/tree/main/sources/core)
 
