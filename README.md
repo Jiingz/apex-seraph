@@ -13,7 +13,7 @@ A [Teensy 4.1](https://www.pjrc.com/store/teensy41.html)
 
 Seraph requires you to have the latest Windows10 Version
 
-## Visual Studio including everything for C++ and WDK (Windows Driver Development Kit)
+## Visual Studio including everything for C++ and WDK (Windows Driver Development Kit) ##
 
 It consists of 4 components:
 
