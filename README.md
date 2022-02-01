@@ -40,6 +40,9 @@ I did not investigate if EAC flags for doing so, but they definetly don't, and p
 
 ## How does it work? ##
 
+This Diagram was **NOT** done before writing this, I quickly created it to make my explanations more clear.
+If you are really interested into this project, I would recommend to read everything.
+
 ![Diagram](https://user-images.githubusercontent.com/49228523/151992550-3724f8ca-5023-449d-9ca2-131f5451fd81.png)
 
 The Usermode Application sends a [PacketCopyMemory](https://github.com/Jiingz/apex-seraph/blob/main/sources/core/driver/server_shared.h#L15) structure as packet to pass info to the Kernel Driver.
