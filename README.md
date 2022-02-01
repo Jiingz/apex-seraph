@@ -55,7 +55,7 @@ Once received, the kernel driver reads the information in the game process and r
 and communicates with the Teensy (as described below) for aiming.
 
 The Teensy receives a array of size which holds the X and Y coordinates where the aimbot should aim at. [Communication Function](https://github.com/Jiingz/apex-seraph/blob/main/sources/core/hardware/serial_controller.cpp#L9)
-The serial port sends the data sequential, so we can handle the values [sequential](https://github.com/Jiingz/apex-seraph/blob/main/sources/Hardware/serial_connection/serial_connection.ino#L17) aswell, since we never receive an array, instead we receive the values in a sequential order.
+The serial port sends the data sequential, so we can handle the values [sequential](https://github.com/Jiingz/apex-seraph/blob/main/sources/Hardware/serial_connection/serial_connection.ino#L17) aswell since we've never received an array. Instead we receive the values in a sequential order.
 
 
 # Features #
