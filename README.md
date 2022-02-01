@@ -5,20 +5,13 @@ It uses multiple system-privilege levels (Ring 0 and 3)
 # Requirements
 
 ## The Hardware ##
-A [Teensy 4.1](https://www.pjrc.com/store/teensy41.html)
+1. A [Teensy 4.1](https://www.pjrc.com/store/teensy41.html)
 
 ![image](https://user-images.githubusercontent.com/49228523/151983408-e43c0f48-a46e-4437-8ad2-87fafc2d470e.png)
 
-## Latest Windows10 Version ##
+2. Seraph requires you to have the latest Windows10 Version
 
-Seraph requires you to have the latest Windows10 Version
-
-## Visual Studio including everything for C++ and WDK (Windows Driver Development Kit) ##
-
-In order to compile the Projects.
-
-
-
+3. Visual Studio including everything for C++ and WDK (Windows Driver Development Kit) to compile the Projects.
 
 # It consists of 4 components: #
 
