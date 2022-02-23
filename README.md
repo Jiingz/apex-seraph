@@ -34,6 +34,8 @@ I would advice to map it cleanly, since that's the way I did. There are still no
 
 # [The Loader](https://github.com/Jiingz/apex-seraph/tree/main/sources/loader) #
 Including a Login System (You need to implement it your own, I've used Cryptolens) and settings for every Feature.
+![menu](https://user-images.githubusercontent.com/49228523/155356531-75307d7e-799f-4df6-ad5d-c2b17e0eb926.jpeg)
+
 
 # [The Hardware](https://github.com/Jiingz/apex-seraph/blob/main/sources/Hardware/serial_connection/serial_connection.ino)
 
