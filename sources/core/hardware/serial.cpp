@@ -8,18 +8,16 @@ using namespace hardware;
 
 void SerialProvider::Setup()
 {
-	Serial5.begin(345600);
+	Serial3.begin(345600);
 
 	//yellow
-	system(xor ("Color e"));
-	std::cout << xor ("[+] Connecting to device...") << std::endl;
+	OutputDebugString(L"Connecting to Device...");
 
-	while (!Serial5);
-	system(xor ("cls")); 
+	while (!Serial3);
+	Sleep(1);
 
-	while (Serial5.available())
-		Serial5.read();
-	system(xor ("Color a"));
-	std::cout << xor ("[+] Connected") << std::endl;
+	while (Serial3.available())
+		Serial3.read();
+	OutputDebugString(L"Connected Successfully.");
 
 }

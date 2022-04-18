@@ -37,7 +37,7 @@ Config* GetConfig()
 
 void InitializeCore()
 {
-	driver::Initialize();
+	//driver::Initialize();
 	hardware::SerialProvider::Setup();
 }
 

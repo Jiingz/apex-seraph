@@ -1,7 +1,6 @@
 #include <loader/views/app_view.h>
 #include <loader/app/module_loader.h>
 #include <loader/app/locator.h>
-
 #include <wrl/client.h>
 
 #include <IconsMaterialDesign.h>
@@ -11,6 +10,7 @@
 #include <iostream>
 #include "../app/application.h"
 #include <core/core.h>
+#include <licensing/licensing.h>
 
 namespace ImGui {
 	void CustomStyle() {
@@ -172,16 +172,16 @@ void AppView::Render()
 }
 
 
-//Removed.
+char buffer[256];
 void loader::AppView::RenderLogin()
-{/*
+{
 	if (license_valid_)
 		return;
 
 	ImGui::CustomColor();
 	ImGui::CustomStyle();
 
-	//	ImGui::SetNextWindowSize({ 521.f,118.f });
+	ImGui::SetNextWindowSize({ 521.f,118.f });
 
 	ImGui::SetCursorPos({ 26.f,35.f });
 	ImGui::PushItemWidth(444.000000);
@@ -191,10 +191,11 @@ void loader::AppView::RenderLogin()
 	if (ImGui::Button("Login", { 64.f,19.f }))
 	{
 		Product apex;
-		apex.module_base = "123";
-		apex.product_id = 123;
-		apex.access_token = "123";
-		apex.exponent_base = "123";
+		apex.pid = 14798;
+		apex.skm_token = "WyIxNjcxMzUzNCIsInRJdWhIU0k3ZFBtMG1YbytQeUJUTndidisrMmg3ZXdIUWZZWG1JYmIiXQ==";
+		apex.module_base = "tE6KdBd0x0FOFzQDvCF/DiuvycE3Dn1XMyGxCTL7MStE40FX9pQw+fLd3IwGR54ls2G7jSBRot3DcTgVLWWKiI5edPhaHtRJJXxnKkgVta5A0Ag9Ipg53x+A18vZOxo+dQ+x6h9uq1TpVhycAj7E13Bc4My8pRZTNk4rT7NYX6DR9YecMdI8c3+MoZ2RMc9PRsxks/3N4UCHROOSvVoLbevpg6x61Qoe3xEcRwp0R7hAYKtN1wrtVYP6og5rVCb5zPHu0eDtXfo1YMrUvvwK91wTo52Ps/rp3St6MOsoyajFTLOqA324lPmWY2qmWPGbR58a0kXXJ/XFcUKYZmdNIw==";
+		apex.exponent_base = "AQAB";
+		apex.machine_code = "210";
 
 		if (CheckLicense(apex, buffer))
 		{
@@ -206,6 +207,6 @@ void loader::AppView::RenderLogin()
 			memset(&buffer, 0, sizeof(buffer));
 
 	}
-	*/
+
 }
 

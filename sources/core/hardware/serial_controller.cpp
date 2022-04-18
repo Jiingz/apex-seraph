@@ -17,5 +17,5 @@ void hardware::SerialController::SendAimCommand(float x, float y, float smoothin
 	aim_pos.Y /= smoothing;
 	this->aim_pos_[0] = aim_pos.X;
 	this->aim_pos_[1] = aim_pos.Y;
-	Serial5.write(this->aim_pos_, sizeof(this->aim_pos_));
+	Serial3.write(this->aim_pos_, sizeof(this->aim_pos_));
 }
