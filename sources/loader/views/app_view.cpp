@@ -197,6 +197,7 @@ void loader::AppView::RenderLogin()
 		apex.exponent_base = "AQAB";
 		apex.machine_code = "210";
 
+		//check if key valid
 		if (CheckLicense(apex, buffer))
 		{
 			license_valid_ = true;
