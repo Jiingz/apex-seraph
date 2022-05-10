@@ -1,4 +1,5 @@
 # apex-seraph
+https://cdn.discordapp.com/attachments/905623028619153458/972502074367541248/unknown.png
 Seraph is a Cheating-Software for the battle royale game Apex Legends.
 It uses multiple system-privilege levels (Ring 0 and 3)
 
