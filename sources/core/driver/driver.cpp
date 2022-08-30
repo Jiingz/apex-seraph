@@ -79,7 +79,7 @@ void driver::Initialize()
 	catch (...) //its fine to catch all exceptions in this case
 	{
 		system(xor ("color c"));
-		OutputDebugString(L"Failed connection to Driver. At Function: driver.cpp,82");
+		OutputDebugString(L"Failed connection to Driver.");
 		Sleep(5000);
 		exit(0);
 	}
@@ -105,7 +105,7 @@ SOCKET driver::CreateSocketConnection()
 	{
 		closesocket(connection);
 		system(xor ("color c"));
-		OutputDebugString(L"Creation of Socket Connection failed.driver.cpp,108");
+		OutputDebugString(L"Creation of Socket Connection failed.");
 		Sleep(5000);
 		return INVALID_SOCKET;
 	}

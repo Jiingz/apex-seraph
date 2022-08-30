@@ -131,8 +131,6 @@ Vector3 GetClosestBonePosition(uintptr_t target)
 
 void Aimbot::Execute()
 {
-	features::Glow::GlowOnFrame();
-
 	uintptr_t local_player = core::ServiceLocator::GetWorld()->GetPlayer();
 
 	if (!game::Entity::IsZooming(local_player)) // aimbot key

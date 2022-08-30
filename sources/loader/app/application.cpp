@@ -13,7 +13,7 @@
 
 using namespace loader;
 
- SDL_Window* Application::window_ = nullptr;
+SDL_Window* Application::window_ = nullptr;
 
 Application::Application()
 	: is_closed_(false)
@@ -98,7 +98,7 @@ void Application::Render()
 
 	{
 		//	ImGui::SetNextWindowPos(ImVec2(0, 0));
-		//ImGui::SetNextWindowSize(ImVec2(500, 118));
+	//	ImGui::SetNextWindowSize(ImVec2(500, 118));
 		ImGui::Begin("MainWindow", 0,
 			ImGuiWindowFlags_NoResize |
 			ImGuiWindowFlags_NoCollapse |
@@ -188,9 +188,9 @@ void Application::InitializeResources()
 	auto md_material_font = io.Fonts->AddFontFromFileTTF("resources\\fonts\\MaterialIcons-Regular.ttf", 13.0f, &icons_config, icons_ranges);
 	auto lg_material_font = io.Fonts->AddFontFromFileTTF("resources\\fonts\\MaterialIcons-Regular.ttf", 32.0f, &icons_config, icons_ranges);
 
-	fonts_storage->Store(TEXT("md-main-font"), ResourcePtrNop<ImFont>(md_main_font));
-	fonts_storage->Store(TEXT("md-material-font"), ResourcePtrNop<ImFont>(md_material_font));
-	fonts_storage->Store(TEXT("lg-material-font"), ResourcePtrNop<ImFont>(lg_material_font));
+	fonts_storage->Store(LPCWSTR("md-main-font"), ResourcePtrNop<ImFont>(md_main_font));
+	fonts_storage->Store(LPCWSTR("md-material-font"), ResourcePtrNop<ImFont>(md_material_font));
+	fonts_storage->Store(LPCWSTR("lg-material-font"), ResourcePtrNop<ImFont>(lg_material_font));
 
 	io.Fonts->Build();
 }

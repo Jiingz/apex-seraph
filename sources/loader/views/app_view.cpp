@@ -125,9 +125,9 @@ void AppView::Initialize()
 {
 	auto font_resources = Locator::GetFonts();
 
-	md_main_font_ = &font_resources->Get(TEXT("md-main-font"));
-	md_material_font_ = &font_resources->Get(TEXT("md-material-font"));
-	lg_material_font_ = &font_resources->Get(TEXT("lg-material-font"));
+	md_main_font_ = &font_resources->Get(LPCWSTR("md-main-font"));
+	md_material_font_ = &font_resources->Get(LPCWSTR("md-material-font"));
+	lg_material_font_ = &font_resources->Get(LPCWSTR("lg-material-font"));
 }
 
 const char* list[] = { "Outline","Visible","Bloodhound" };
@@ -136,7 +136,7 @@ void AppView::Render()
 	if (!license_valid_)
 		return;
 
-	RunCore();
+	//RunCore();
 
 	ImGui::SetWindowSize({ 750.f,327.f });
 
@@ -190,18 +190,12 @@ void loader::AppView::RenderLogin()
 	ImGui::SetCursorPos({ 213.f,76.f });
 	if (ImGui::Button("Login", { 64.f,19.f }))
 	{
-		Product apex;
-		apex.pid = 14798;
-		apex.skm_token = "WyIxNjcxMzUzNCIsInRJdWhIU0k3ZFBtMG1YbytQeUJUTndidisrMmg3ZXdIUWZZWG1JYmIiXQ==";
-		apex.module_base = "tE6KdBd0x0FOFzQDvCF/DiuvycE3Dn1XMyGxCTL7MStE40FX9pQw+fLd3IwGR54ls2G7jSBRot3DcTgVLWWKiI5edPhaHtRJJXxnKkgVta5A0Ag9Ipg53x+A18vZOxo+dQ+x6h9uq1TpVhycAj7E13Bc4My8pRZTNk4rT7NYX6DR9YecMdI8c3+MoZ2RMc9PRsxks/3N4UCHROOSvVoLbevpg6x61Qoe3xEcRwp0R7hAYKtN1wrtVYP6og5rVCb5zPHu0eDtXfo1YMrUvvwK91wTo52Ps/rp3St6MOsoyajFTLOqA324lPmWY2qmWPGbR58a0kXXJ/XFcUKYZmdNIw==";
-		apex.exponent_base = "AQAB";
-		apex.machine_code = "210";
 
 		//check if key valid
-		if (CheckLicense(apex, buffer))
+		if (licensing::Auth::Authenticate("Jiingz", "X25100803yz!123"))
 		{
 			license_valid_ = true;
-			InitializeCore();
+			//InitializeCore();
 			SDL_SetWindowSize(loader::Application::GetWindow(), 624.f, 327.f);
 		}
 		else

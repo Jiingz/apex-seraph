@@ -2,6 +2,7 @@
 #include <core/hardware/serial.h>
 #include <core/service_locator.h>
 #include <core/features/aimbot.h>
+#include <core/features/glow.h>
 #include <core/game/entity.h>
 
 #include <iostream>
@@ -13,6 +14,7 @@ std::shared_ptr<Config> config_;
 void FunctionExecution()
 {
 	features::Aimbot::Execute();
+	features::Glow::GlowOnFrame();
 
 	if (GetAsyncKeyState(VK_F10))
 	{
@@ -37,11 +39,6 @@ Config* GetConfig()
 
 void InitializeCore()
 {
-	//driver::Initialize();
+	driver::Initialize();
 	hardware::SerialProvider::Setup();
-}
-
-int main()
-{
-	return 0;
 }
