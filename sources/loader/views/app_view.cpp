@@ -172,7 +172,8 @@ void AppView::Render()
 }
 
 
-char buffer[256];
+char username_buffer[256];
+char password_buffer[256];
 void loader::AppView::RenderLogin()
 {
 	if (license_valid_)
@@ -183,23 +184,32 @@ void loader::AppView::RenderLogin()
 
 	ImGui::SetNextWindowSize({ 521.f,118.f });
 
-	ImGui::SetCursorPos({ 26.f,35.f });
-	ImGui::PushItemWidth(444.000000);
-	ImGui::InputText("##License", buffer, 255);
+	ImGui::SetCursorPos({ 75,15.f });
+	ImGui::PushItemWidth(100.f);
+	ImGui::InputText("##Username", username_buffer, 255);
+
+	ImGui::SetCursorPos({ 75,55.f });
+	ImGui::PushItemWidth(100.0f);
+	ImGui::InputText("##Password", password_buffer, 255);
 	ImGui::PopItemWidth();
-	ImGui::SetCursorPos({ 213.f,76.f });
+	ImGui::SetCursorPos({ 90,96.f });
 	if (ImGui::Button("Login", { 64.f,19.f }))
 	{
 
 		//check if key valid
-		if (licensing::Auth::Authenticate("Jiingz", "X25100803yz!123"))
+		if (licensing::Auth::Authenticate(username_buffer, password_buffer))
 		{
 			license_valid_ = true;
 			//InitializeCore();
 			SDL_SetWindowSize(loader::Application::GetWindow(), 624.f, 327.f);
+
 		}
 		else
-			memset(&buffer, 0, sizeof(buffer));
+		{
+			memset(&username_buffer, 0, sizeof(username_buffer));
+			memset(&password_buffer, 0, sizeof(password_buffer));
+		}
+
 
 	}
 

@@ -91,7 +91,7 @@ namespace licensing
 
 			KeyAuthApp.check();
 
-			KeyAuthApp.login("Test", "Test");
+			KeyAuthApp.login(username, password);
 
 			if (!KeyAuthApp.data.success)
 			{

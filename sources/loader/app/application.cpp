@@ -98,7 +98,7 @@ void Application::Render()
 
 	{
 		//	ImGui::SetNextWindowPos(ImVec2(0, 0));
-	//	ImGui::SetNextWindowSize(ImVec2(500, 118));
+		//ImGui::SetNextWindowSize(ImVec2(250, 150));
 		ImGui::Begin("MainWindow", 0,
 			ImGuiWindowFlags_NoResize |
 			ImGuiWindowFlags_NoCollapse |
@@ -106,7 +106,7 @@ void Application::Render()
 			ImGuiWindowFlags_NoScrollWithMouse |
 			ImGuiWindowFlags_NoTitleBar |
 			ImGuiWindowFlags_NoBringToFrontOnFocus |
-			ImGuiWindowFlags_NoMove);
+			ImGuiWindowFlags_NoMove | ImGuiConfigFlags_None);
 
 		app_view_.RenderLogin();
 		app_view_.Render();
@@ -151,7 +151,7 @@ void Application::InitializeGraphics()
 	SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 3);
 	SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, 2);
 
-	window_ = SDL_CreateWindow("Vault7", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 500, 118, SDL_WINDOW_ALLOW_HIGHDPI | SDL_WINDOW_OPENGL);
+	window_ = SDL_CreateWindow("Vault7", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 250, 150, SDL_WINDOW_ALLOW_HIGHDPI | SDL_WINDOW_OPENGL);
 
 	context_ = SDL_GL_CreateContext(window_);
 	SDL_GL_MakeCurrent(window_, context_);
