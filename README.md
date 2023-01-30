@@ -70,4 +70,4 @@ Glowing enemys through walls (or not), including the option to choose between mu
 
 ## Why am I releasing this? ##
 
-Well, I stopped actively using Windows at all so I pretty much quit gamehacking, and focus on projects which are more future orientated regarding my future jobs and give me more knowledge.
+EDIT: It's an old, unused source :)
