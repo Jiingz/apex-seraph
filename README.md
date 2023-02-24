@@ -1,6 +1,10 @@
 # apex-seraph
 Seraph is a Assistance Software for the battle royale game Apex Legends.
-It uses multiple system-privilege levels (Ring 0 and 3)
+It is splitten between 3 parts. 
+
+1. A Usermode application, which does the logic and connects to the Teensy to perform mouse movements.
+2. A Kernel Driver to read memory from the game
+3. The Teensy, which acts as a additional mouse, sending mouse movement when requested by the usermode application.
 
 # Requirements
 
