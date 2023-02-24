@@ -1,5 +1,5 @@
 # apex-seraph
-Seraph is a Cheating-Software for the battle royale game Apex Legends.
+Seraph is a Assistance Software for the battle royale game Apex Legends.
 It uses multiple system-privilege levels (Ring 0 and 3)
 
 # Requirements
@@ -67,7 +67,3 @@ The Aimbot is smooth, and has the option to be smoothed out to a point where no 
 
 ## Glow ##
 Glowing enemys through walls (or not), including the option to choose between multiple [Glow Contexts](https://github.com/Jiingz/apex-seraph/blob/main/sources/core/game/structs.h#L8)
-
-## Why am I releasing this? ##
-
-EDIT: It's an old, unused source :)
